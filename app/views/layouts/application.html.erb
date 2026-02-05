@@ -29,7 +29,9 @@
     <header class="header">
       <nav class="nav">
         <div class="logo">
-          <span class="logo-blue">Digital</span><span class="logo-gray">Agency</span>
+          <%= link_to root_path, class: "logo-link", aria: { label: "DMC home" } do %>
+            <%= image_tag "dmc-logo.svg", class: "logo-mark", alt: "DMC logo" %>
+          <% end %>
         </div>
         
         <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false" type="button">

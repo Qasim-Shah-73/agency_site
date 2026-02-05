@@ -374,6 +374,20 @@ main {
   transition: opacity 0.2s ease;
 }
 
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-mark {
+  width: 140px;
+  height: 44px;
+  display: block;
+}
+
 .logo:hover {
   opacity: 0.8;
 }
@@ -573,6 +587,11 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  }
+
+  .logo-mark {
+    width: 120px;
+    height: 38px;
   }
   
   /* Smaller 3D cubes on mobile */
