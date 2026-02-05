@@ -16,11 +16,16 @@
     <p class="hero-text">
       A snapshot of early engagements and pilot projects where we prioritized measurable improvement, clear communication, and long-term foundations.
     </p>
+
+    <div class="hero-links">
+      <a class="hero-link" href="#case-studies">View Case Studies</a>
+      <%= link_to "Start a Project", contact_path, class: "hero-link hero-link-secondary" %>
+    </div>
   </div>
 </section>
 
 <!-- FEATURED CASE STUDIES -->
-<section class="case-studies">
+<section class="case-studies" id="case-studies">
   <div class="section-header">
     <h2 class="section-title">Featured Case Studies</h2>
     <p class="section-subtitle">Measured improvements without inflated claims</p>
@@ -380,7 +385,7 @@
         <i class="ph ph-quotes"></i>
       </div>
       <p class="testimonial-text">
-        "DMC brought structure to our launch — clear milestones, honest feedback, and steady improvements in conversion."
+        "DMC brought structure to our launch - clear milestones, honest feedback, and steady improvements in conversion."
       </p>
       <div class="testimonial-author">
         <div class="author-info">
@@ -576,7 +581,7 @@ function animateDial(dial) {
       valueElement.textContent = Math.round(currentValue) + suffix;
     }
     
-    // Update circle (0–100 scale)
+    // Update circle (0-100 scale)
     const normalizedValue = Math.min(targetValue / 100, 1);
     const offset = circumference - (circumference * normalizedValue * easeOutCubic);
     progressCircle.style.strokeDashoffset = offset;

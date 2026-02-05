@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag 'thank_you.css' %>
+
+<section class="thank-you">
+  <div class="thank-you-card">
+    <span class="badge">
+      <i class="ph ph-check-circle"></i>
+      Message sent
+    </span>
+    <h1 class="thank-you-title">Thanks for reaching out.</h1>
+    <p class="thank-you-text">
+      <%= flash[:notice].presence || "We have received your request and will respond within 4 business hours." %>
+    </p>
+    <div class="thank-you-actions">
+      <%= link_to "Back to Home", root_path, class: "btn-primary" %>
+      <%= link_to "View Services", services_path, class: "btn-secondary" %>
+    </div>
+  </div>
+</section>

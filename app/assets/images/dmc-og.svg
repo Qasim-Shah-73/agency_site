@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DMC social preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1A365D"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="120" y="140" width="960" height="350" rx="36" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+  <g stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M260 200 V430 H340 C395 430 430 395 430 315 C430 235 395 200 340 200 H260"/>
+    <path d="M520 430 V200 L600 315 L680 200 V430"/>
+    <path d="M940 240 C885 200 760 210 720 315 C760 420 885 430 940 390"/>
+  </g>
+  <path d="M470 315 H730" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round"/>
+  <text x="600" y="520" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Sora, sans-serif" font-size="26" letter-spacing="2">
+    Digital Marketing &amp; Development
+  </text>
+</svg>

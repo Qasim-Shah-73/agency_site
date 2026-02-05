@@ -191,6 +191,45 @@
     letter-spacing: -0.3px;
 }
 
+.hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(44, 82, 130, 0.08);
+    border: 1px solid rgba(44, 82, 130, 0.18);
+    transition: all 0.2s ease;
+}
+
+.hero-link:hover {
+    background: rgba(44, 82, 130, 0.14);
+    transform: translateY(-1px);
+}
+
+.hero-link-secondary {
+    background: white;
+    color: var(--dark);
+    border-color: rgba(226, 232, 240, 0.9);
+}
+
+.hero-link-secondary:hover {
+    border-color: rgba(44, 82, 130, 0.3);
+    color: var(--primary);
+}
+
 /* ============================================
    SECTIONS
    ============================================ */
@@ -615,6 +654,7 @@
     color: var(--dark);
     margin-bottom: 8px;
     letter-spacing: -0.4px;
+    line-height: 1.4;
 }
 
 .highlight-label {
@@ -919,5 +959,15 @@
     .btn-white,
     .btn-outline-white {
         width: 100%;
+    }
+
+    .hero-links {
+        flex-direction: column;
+    }
+
+    .hero-link {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
     }
 }

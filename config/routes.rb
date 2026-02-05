@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "services",  to: "pages#services",  as: :services
   get "portfolio", to: "pages#portfolio", as: :portfolio
   get "contact",   to: "pages#contact",   as: :contact
+  get "thank-you", to: "pages#thank_you", as: :thank_you
   post "contact",  to: "contacts#create"
 
   root "pages#home"

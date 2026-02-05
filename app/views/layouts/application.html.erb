@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DigitalAgency</title>
+    <title>DMC</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="DMC is a digital marketing and development studio helping startups and growing businesses build modern websites, lead-gen funnels, and performance foundations.">
+    <meta property="og:title" content="DMC">
+    <meta property="og:description" content="Digital marketing and development for startups and growing businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="<%= image_url('dmc-og.svg') %>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DMC">
+    <meta name="twitter:description" content="Digital marketing and development for startups and growing businesses.">
+    <meta name="twitter:image" content="<%= image_url('dmc-og.svg') %>">
+    <meta name="theme-color" content="#1A365D">
     <meta name="turbo-cache-control" content="no-cache">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "immersive_background", "data-turbo-track": "reload" %>
+    <%= favicon_link_tag "dmc-favicon.svg", type: "image/svg+xml" %>
 
     <%= javascript_importmap_tags %>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -30,7 +41,7 @@
       <nav class="nav">
         <div class="logo">
           <%= link_to root_path, class: "logo-link", aria: { label: "DMC home" } do %>
-            <%= image_tag "dmc-logo.svg", class: "logo-mark", alt: "DMC logo" %>
+            <%= image_tag "dmc-logo.svg", class: "logo-mark", alt: "DMC logo", loading: "eager", decoding: "async" %>
           <% end %>
         </div>
         
@@ -43,6 +54,7 @@
         <div class="nav-links" id="primary-navigation">
           <%= link_to "Home", root_path, class: "nav-link #{'active' if current_page?(root_path)}" %>
           <%= link_to "Services", services_path, class: "nav-link #{'active' if current_page?(services_path)}" %>
+          <%= link_to "Process", about_path(anchor: "process"), class: "nav-link" %>
           <%= link_to "Portfolio", portfolio_path, class: "nav-link #{'active' if current_page?(portfolio_path)}" %>
           <%= link_to "About", about_path, class: "nav-link #{'active' if current_page?(about_path)}" %>
           <%= link_to "Contact", contact_path, class: "btn-primary #{'active' if current_page?(contact_path)}" %>
@@ -51,7 +63,7 @@
     </header>
 
     <!-- PAGE CONTENT -->
-    <main id="main-content" style="padding-top: 88px; min-height: calc(100vh - 420px);">
+    <main id="main-content" style="padding-top: var(--header-height); min-height: calc(100vh - 420px);">
       <%= yield %>
     </main>
 
@@ -59,10 +71,11 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-brand">
-          <%= image_tag "dmc-logo-light.svg", class: "footer-logo", alt: "DMC logo" %>
+          <%= image_tag "dmc-logo-light.svg", class: "footer-logo", alt: "DMC logo", loading: "lazy", decoding: "async" %>
           <p class="footer-text">
             © <%= Time.current.year %> <span class="footer-highlight">DMC</span>
           </p>
+          <p class="footer-tagline">Digital Marketing & Development</p>
         </div>
         <div class="footer-items">
           <span class="footer-item">
@@ -75,7 +88,13 @@
             <i class="ph ph-code footer-icon icon-dev"></i> Development
           </span>
         </div>
+        <div class="footer-cta">
+          <div class="footer-cta-text">Have a project in mind?</div>
+          <%= link_to "Start a Project", contact_path, class: "footer-cta-button" %>
+        </div>
       </div>
     </footer>
+
+    <%= link_to "Schedule a Call", contact_path, class: "mobile-cta" %>
   </body>
 </html>

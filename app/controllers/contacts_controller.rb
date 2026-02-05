@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     end
 
     ContactMailer.with(contact: contact).new_message.deliver_now
-    redirect_to contact_path, notice: "Thanks for reaching out. We will respond within 4 business hours."
+    redirect_to thank_you_path, notice: "Thanks for reaching out. We will respond within 4 business hours."
   rescue StandardError => e
     Rails.logger.error("Contact form delivery failed: #{e.class} - #{e.message}")
     redirect_to contact_path, alert: "Sorry, we could not send your message. Please email us at info@ukdmc.co.uk."
