@@ -1,0 +1,504 @@
+<%= stylesheet_link_tag 'contact.css' %>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="badge">
+      <i class="ph ph-handshake"></i>
+      Get In Touch
+    </span>
+    
+    <h1 class="hero-title">
+      Let's Build Your<br>
+      <span class="hero-gradient">Digital Future Together</span>
+    </h1>
+    
+    <p class="hero-text">
+      Whether you're launching a new venture, scaling an existing business, or transforming your digital presence, our team is ready to architect solutions that drive measurable growth. Every successful partnership begins with a conversation.
+    </p>
+  </div>
+</section>
+
+<!-- STRATEGY SESSION -->
+<section class="strategy-section">
+  <div class="strategy-content">
+    <div class="strategy-header">
+      <h2 class="strategy-title">Schedule Your Complimentary Strategy Session</h2>
+      <p class="strategy-subtitle">
+        Discover how our integrated digital solutions can accelerate your business objectives. During your consultation, we'll:
+      </p>
+    </div>
+    
+    <div class="strategy-grid">
+      <div class="strategy-item">
+        <div class="strategy-icon">
+          <i class="ph ph-magnifying-glass"></i>
+        </div>
+        <div class="strategy-text">
+          <strong>Analyze</strong> your current digital presence and competitive positioning
+        </div>
+      </div>
+      
+      <div class="strategy-item">
+        <div class="strategy-icon">
+          <i class="ph ph-lightbulb"></i>
+        </div>
+        <div class="strategy-text">
+          <strong>Identify</strong> untapped opportunities and growth potential
+        </div>
+      </div>
+      
+      <div class="strategy-item">
+        <div class="strategy-icon">
+          <i class="ph ph-chart-line"></i>
+        </div>
+        <div class="strategy-text">
+          <strong>Discuss</strong> strategic recommendations tailored to your goals
+        </div>
+      </div>
+      
+      <div class="strategy-item">
+        <div class="strategy-icon">
+          <i class="ph ph-target"></i>
+        </div>
+        <div class="strategy-text">
+          <strong>Outline</strong> potential solutions and expected outcomes
+        </div>
+      </div>
+      
+      <div class="strategy-item">
+        <div class="strategy-icon">
+          <i class="ph ph-currency-dollar"></i>
+        </div>
+        <div class="strategy-text">
+          <strong>Provide</strong> transparent pricing and timeline estimates
+        </div>
+      </div>
+    </div>
+    
+    <div class="strategy-note">
+      No obligations. No sales pressure. Just strategic insights from digital experts.
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT INFO & FORM -->
+<section class="contact-main alt-bg">
+  <div class="contact-container">
+    
+    <!-- Contact Info Sidebar -->
+    <div class="contact-info">
+      <h2 class="info-title">Get In Touch</h2>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="ph ph-map-pin"></i>
+        </div>
+        <div class="info-content">
+          <h3 class="info-label">Corporate Headquarters</h3>
+          <p class="info-detail">
+            3 Dalston Gardens,<br>
+            Stanmore, England, HA7 1DA
+          </p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="ph ph-phone"></i>
+        </div>
+        <div class="info-content">
+          <h3 class="info-label">Phone</h3>
+          <p class="info-detail">
+            <a href="tel:+447510088894" class="info-link">+44 75 1008 8894</a>
+          </p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="ph ph-envelope"></i>
+        </div>
+        <div class="info-content">
+          <h3 class="info-label">Email</h3>
+          <p class="info-detail">
+            <a href="mailto:info@ukdmc.co.uk" class="info-link">info@ukdmc.co.uk</a>
+          </p>
+        </div>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="ph ph-clock"></i>
+        </div>
+        <div class="info-content">
+          <h3 class="info-label">Business Hours</h3>
+          <p class="info-detail">
+            Monday - Friday: 9:00 AM - 6:00 PM<br>
+            Saturday: 10:00 AM - 2:00 PM<br>
+            Sunday: Closed
+          </p>
+          <div class="emergency-badge">
+            <i class="ph ph-shield-check"></i>
+            24/7 Emergency Support Available for Existing Clients
+          </div>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <h3 class="social-title">Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <i class="ph ph-linkedin-logo"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="ph ph-twitter-logo"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="ph ph-facebook-logo"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+      <div class="form-header">
+        <h2 class="form-title">Send Us a Message</h2>
+        <p class="form-subtitle">Fill out the form below and we'll get back to you within 4 business hours</p>
+      </div>
+      
+      <% if flash[:notice].present? %>
+        <div class="form-alert form-alert-success">
+          <i class="ph ph-check-circle"></i>
+          <span><%= flash[:notice] %></span>
+        </div>
+      <% elsif flash[:alert].present? %>
+        <div class="form-alert form-alert-error">
+          <i class="ph ph-warning-circle"></i>
+          <span><%= flash[:alert] %></span>
+        </div>
+      <% end %>
+
+      <%= form_with url: contact_path, method: :post, scope: :contact, local: true, html: { class: "contact-form" } do %>
+        <!-- Name Fields -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first_name" class="form-label">First Name <span class="required">*</span></label>
+            <input type="text" id="first_name" name="contact[first_name]" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="last_name" class="form-label">Last Name <span class="required">*</span></label>
+            <input type="text" id="last_name" name="contact[last_name]" class="form-input" required>
+          </div>
+        </div>
+        
+        <!-- Email & Phone -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" class="form-label">Business Email <span class="required">*</span></label>
+            <input type="email" id="email" name="contact[email]" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="contact[phone]" class="form-input" required>
+          </div>
+        </div>
+        
+        <!-- Company & Website -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company" class="form-label">Company Name</label>
+            <input type="text" id="company" name="contact[company]" class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label for="website" class="form-label">Website URL</label>
+            <input type="url" id="website" name="contact[website]" class="form-input" placeholder="https://">
+          </div>
+        </div>
+        
+        <!-- Services Interest -->
+        <div class="form-group">
+          <label class="form-label">Which services interest you? <span class="form-hint">(Select all that apply)</span></label>
+          <div class="checkbox-grid">
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="seo">
+              <span>SEO & Digital Marketing</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="web_dev">
+              <span>Web Development</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="web_design">
+              <span>Web Design</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="cybersecurity">
+              <span>Cybersecurity</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="cloud">
+              <span>Cloud Services</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="ott">
+              <span>OTT Solutions</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="immersive">
+              <span>Immersive Design</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="graphic">
+              <span>Graphic Design</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="maintenance">
+              <span>Website Maintenance</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="hosting">
+              <span>Hosting & Domain Services</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="leads">
+              <span>Lead Generation</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[services][]" value="other">
+              <span>Other</span>
+            </label>
+          </div>
+        </div>
+        
+        <!-- Business Objectives -->
+        <div class="form-group">
+          <label class="form-label">What are your primary business objectives? <span class="form-hint">(Select all that apply)</span></label>
+          <div class="checkbox-grid">
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[objectives][]" value="traffic">
+              <span>Increase website traffic</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[objectives][]" value="leads">
+              <span>Generate more leads</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[objectives][]" value="conversions">
+              <span>Improve conversion rates</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[objectives][]" value="build">
+              <span>Build new website/application</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[objectives][]" value="brand">
+              <span>Enhance brand presence</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[objectives][]" value="security">
+              <span>Improve security</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[objectives][]" value="scale">
+              <span>Scale infrastructure</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="contact[objectives][]" value="other_obj">
+              <span>Other</span>
+            </label>
+          </div>
+        </div>
+        
+        <!-- Timeline & Budget -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="timeline" class="form-label">Project Timeline</label>
+            <select id="timeline" name="contact[timeline]" class="form-select">
+              <option value="">Select timeline...</option>
+              <option value="immediate">Immediate (Within 1 month)</option>
+              <option value="short">Short-term (1-3 months)</option>
+              <option value="mid">Mid-term (3-6 months)</option>
+              <option value="long">Long-term (6+ months)</option>
+              <option value="exploring">Exploring options</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="budget" class="form-label">Estimated Budget Range</label>
+            <select id="budget" name="contact[budget]" class="form-select">
+              <option value="">Select budget...</option>
+              <option value="under5k">Under $5,000</option>
+              <option value="5k-15k">$5,000 - $15,000</option>
+              <option value="15k-50k">$15,000 - $50,000</option>
+              <option value="50k-100k">$50,000 - $100,000</option>
+              <option value="100k+">$100,000+</option>
+              <option value="discuss">Prefer to discuss</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Project Details -->
+        <div class="form-group">
+          <label for="message" class="form-label">Tell us about your project or requirements <span class="required">*</span></label>
+          <textarea id="message" name="contact[message]" class="form-textarea" rows="6" required placeholder="Share your goals, challenges, and what you're looking to achieve..."></textarea>
+        </div>
+        
+        <!-- How did you hear -->
+        <div class="form-group">
+          <label for="source" class="form-label">How did you hear about us?</label>
+          <select id="source" name="contact[source]" class="form-select">
+            <option value="">Select source...</option>
+            <option value="google">Google Search</option>
+            <option value="social">Social Media</option>
+            <option value="referral">Referral</option>
+            <option value="event">Industry Event</option>
+            <option value="client">Previous Client</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <!-- Agreement -->
+        <div class="form-group">
+          <label class="checkbox-label-single">
+            <input type="checkbox" name="contact[agree_communications]">
+            <span>I agree to receive communications about services and insights</span>
+          </label>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="form-submit">
+          <span>Submit Request</span>
+          <i class="ph ph-paper-plane-tilt"></i>
+        </button>
+        
+        <p class="form-note">
+          <i class="ph ph-check-circle"></i>
+          We respond to all inquiries within 4 business hours
+        </p>
+      <% end %>
+    </div>
+    
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-header">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Quick answers to common questions</p>
+  </div>
+  
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-question">
+        <i class="ph ph-question"></i>
+        <h3>How quickly can we start a project?</h3>
+      </div>
+      <p class="faq-answer">
+        We can initiate discovery and planning within 48 hours of agreement. Implementation timelines vary by project scope—from 2 weeks for basic websites to 3-6 months for enterprise solutions.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <i class="ph ph-globe"></i>
+        <h3>Do you work with businesses outside your local area?</h3>
+      </div>
+      <p class="faq-answer">
+        Absolutely. We serve clients globally with remote collaboration tools that ensure seamless communication regardless of location.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <i class="ph ph-sparkle"></i>
+        <h3>What makes your approach different from other agencies?</h3>
+      </div>
+      <p class="faq-answer">
+        Our integrated methodology means all services work cohesively rather than in silos. You receive unified strategy, consistent execution, and comprehensive accountability from a single partner.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <i class="ph ph-gear"></i>
+        <h3>Can you work with our existing technology stack?</h3>
+      </div>
+      <p class="faq-answer">
+        Yes. We're technology-agnostic and integrate seamlessly with existing systems, whether enhancing current platforms or building new solutions.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <i class="ph ph-buildings"></i>
+        <h3>What industries do you specialize in?</h3>
+      </div>
+      <p class="faq-answer">
+        We've delivered successful projects across 45+ industries. Our methodology adapts to sector-specific requirements while applying cross-industry best practices.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <i class="ph ph-chart-bar"></i>
+        <h3>How do you measure success?</h3>
+      </div>
+      <p class="faq-answer">
+        Every engagement begins with clearly defined KPIs aligned to your business objectives—whether that's revenue growth, lead generation, traffic increases, or other metrics that matter to your bottom line.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <i class="ph ph-lifebuoy"></i>
+        <h3>Do you offer ongoing support after project completion?</h3>
+      </div>
+      <p class="faq-answer">
+        Yes. We provide comprehensive maintenance packages, ongoing optimization services, and dedicated support to ensure sustained performance and growth.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <i class="ph ph-currency-dollar"></i>
+        <h3>What is your pricing structure?</h3>
+      </div>
+      <p class="faq-answer">
+        Pricing is customized based on scope, complexity, and objectives. We offer project-based pricing, monthly retainers, and performance-based arrangements. All pricing is transparent with detailed proposals.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta alt-bg">
+  <div class="cta-box">
+    <h2 class="cta-title">Ready to Elevate Your Digital Presence?</h2>
+    <p class="cta-text">
+      The most successful digital transformations begin with a simple conversation. Whether you have a fully defined project or are exploring possibilities, our team is ready to provide expert guidance.
+    </p>
+    <div class="cta-note">No commitment required. Just strategic insights from industry experts.</div>
+    <div class="cta-buttons">
+      <%= link_to contact_path, class: "btn-white" do %>
+        <span>Schedule Consultation Now</span>
+        <i class="ph ph-calendar"></i>
+      <% end %>
+      <%= link_to "tel:+447510088894", class: "btn-outline-white" do %>
+        <span>Call Us: +44 75 1008 8894</span>
+        <i class="ph ph-phone"></i>
+      <% end %>
+    </div>
+    <div class="cta-footer">
+      <strong>Your Success Is Our Mission.</strong> Let's Begin.
+    </div>
+  </div>
+</section>

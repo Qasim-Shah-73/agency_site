@@ -1,0 +1,54 @@
+<h2>New Website Inquiry</h2>
+
+<p>You received a new inquiry from the website contact form.</p>
+
+<table cellpadding="6" cellspacing="0" style="border-collapse: collapse;">
+  <tr>
+    <td><strong>Name</strong></td>
+    <td><%= [@contact[:first_name], @contact[:last_name]].compact.join(" ").presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Email</strong></td>
+    <td><%= @contact[:email].presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Phone</strong></td>
+    <td><%= @contact[:phone].presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Company</strong></td>
+    <td><%= @contact[:company].presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Website</strong></td>
+    <td><%= @contact[:website].presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Services</strong></td>
+    <td><%= Array(@contact[:services]).reject(&:blank?).join(", ").presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Objectives</strong></td>
+    <td><%= Array(@contact[:objectives]).reject(&:blank?).join(", ").presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Timeline</strong></td>
+    <td><%= @contact[:timeline].presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Budget</strong></td>
+    <td><%= @contact[:budget].presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Source</strong></td>
+    <td><%= @contact[:source].presence || "Not provided" %></td>
+  </tr>
+  <tr>
+    <td><strong>Agreed to Communications</strong></td>
+    <td><%= @contact[:agree_communications].present? ? "Yes" : "No" %></td>
+  </tr>
+  <tr>
+    <td><strong>Message</strong></td>
+    <td><%= simple_format(@contact[:message].presence || "Not provided") %></td>
+  </tr>
+</table>

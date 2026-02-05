@@ -1,0 +1,176 @@
+
+<%= stylesheet_link_tag 'home.css' %>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="badge">
+      <i class="ph ph-sparkle"></i>
+      Digital Solutions Agency
+    </span>
+    
+    <h1 class="hero-title">
+      Building Digital Products<br>
+      <span class="hero-gradient">That Power Modern Businesses</span>
+    </h1>
+    
+    <p class="hero-text">
+      We design and develop scalable, high-quality digital solutions that help ambitious businesses grow with confidence and clarity.
+    </p>
+    
+    <div class="hero-buttons">
+      <%= link_to contact_path, class: "btn-blue" do %>
+        Start a Project
+        <i class="ph ph-arrow-right"></i>
+      <% end %>
+      <%= link_to portfolio_path, class: "btn-outline" do %>
+        View Our Work
+        <i class="ph ph-arrow-right"></i>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BADGES -->
+<section class="trust-section">
+  <div class="trust-box">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <i class="ph ph-rocket-launch trust-icon"></i>
+        <div class="trust-label">Fast Delivery</div>
+      </div>
+      <div class="trust-item">
+        <i class="ph ph-shield-check trust-icon"></i>
+        <div class="trust-label">Secure & Reliable</div>
+      </div>
+      <div class="trust-item">
+        <i class="ph ph-arrows-out trust-icon"></i>
+        <div class="trust-label">Scalable Systems</div>
+      </div>
+      <div class="trust-item">
+        <i class="ph ph-handshake trust-icon"></i>
+        <div class="trust-label">Long-Term Support</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-header">
+    <h2 class="section-title">Our Expertise</h2>
+    <p class="section-subtitle">
+      End-to-end digital services designed for clarity, performance, and long-term success.
+    </p>
+  </div>
+  
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon-box" style="background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);">
+        <i class="ph ph-code service-icon"></i>
+      </div>
+      <h3 class="service-title">Web Development</h3>
+      <p class="service-desc">Custom Ruby on Rails applications and modern web platforms built to scale with precision and performance.</p>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon-box" style="background: linear-gradient(135deg, #FF3366 0%, #FF1744 100%);">
+        <i class="ph ph-layout service-icon"></i>
+      </div>
+      <h3 class="service-title">UI / UX Design</h3>
+      <p class="service-desc">Clean, conversion-focused interfaces with exceptional user experience and attention to detail.</p>
+    </div>
+    
+    <div class="service-card">
+      <div class="service-icon-box" style="background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);">
+        <i class="ph ph-chart-line service-icon"></i>
+      </div>
+      <h3 class="service-title">Digital Strategy</h3>
+      <p class="service-desc">Technical planning and consulting aligned with real business goals and sustainable growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us">
+  <div class="why-grid">
+    <div>
+      <h2 class="why-title">
+        Designed for Growth.<br>
+        Built for Reliability.
+      </h2>
+      
+      <p class="why-text">
+        We collaborate closely with teams to transform complex ideas into dependable digital products that stand the test of time.
+      </p>
+      
+      <ul class="why-list">
+        <li class="why-item">
+          <i class="ph ph-check-circle why-icon"></i>
+          Scalable, future-proof architecture
+        </li>
+        <li class="why-item">
+          <i class="ph ph-check-circle why-icon"></i>
+          Clean, maintainable codebases
+        </li>
+        <li class="why-item">
+          <i class="ph ph-check-circle why-icon"></i>
+          Professional design standards
+        </li>
+        <li class="why-item">
+          <i class="ph ph-check-circle why-icon"></i>
+          Reliable long-term partnership
+        </li>
+      </ul>
+    </div>
+    
+    <div class="approach-box">
+      <h3 class="approach-title">Our Approach</h3>
+      <p class="approach-text">
+        Strategy first. Design with intent. Development with precision. Every solution is built at the intersection of business goals and user needs, ensuring lasting value and impact.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <div class="portfolio-header">
+    <h2 class="portfolio-title">Selected Projects</h2>
+    <%= link_to portfolio_path, class: "portfolio-link" do %>
+      See All Work
+      <i class="ph ph-arrow-right"></i>
+    <% end %>
+  </div>
+  
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <div class="portfolio-bar" style="background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);"></div>
+      <h3 class="portfolio-card-title">SaaS Platform</h3>
+      <p class="portfolio-card-desc">Scalable business platform built with Ruby on Rails for enterprise-level performance.</p>
+    </div>
+    
+    <div class="portfolio-card">
+      <div class="portfolio-bar" style="background: linear-gradient(135deg, #FF3366 0%, #FF1744 100%);"></div>
+      <h3 class="portfolio-card-title">Enterprise Website</h3>
+      <p class="portfolio-card-desc">High-performance corporate website focused on trust, clarity, and seamless user experience.</p>
+    </div>
+    
+    <div class="portfolio-card">
+      <div class="portfolio-bar" style="background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);"></div>
+      <h3 class="portfolio-card-title">E-commerce Solution</h3>
+      <p class="portfolio-card-desc">Conversion-optimized platform with seamless UX and intelligent checkout flows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta">
+  <div class="cta-box">
+    <h2 class="cta-title">Let's Build Something Exceptional</h2>
+    <p class="cta-text">
+      Have an idea or a challenge in mind? Let's turn it into a refined, scalable digital product that drives real results.
+    </p>
+    <%= link_to "Contact Us", contact_path, class: "btn-white" %>
+  </div>
+</section>

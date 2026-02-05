@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DigitalAgency</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "immersive_background", "data-turbo-track": "reload" %>
+
+    <%= javascript_importmap_tags %>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Floating Background Shapes -->
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+    <div class="shape-3"></div>
+
+    <!-- NAVBAR -->
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <span class="logo-blue">Digital</span><span class="logo-gray">Agency</span>
+        </div>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <div class="nav-links" id="primary-navigation">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+          <%= link_to "Services", services_path, class: "nav-link" %>
+          <%= link_to "Portfolio", portfolio_path, class: "nav-link" %>
+          <%= link_to "About", about_path, class: "nav-link" %>
+          <%= link_to "Contact", contact_path, class: "btn-primary" %>
+        </div>
+      </nav>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main id="main-content" style="padding-top: 80px; min-height: calc(100vh - 400px);">
+      <%= yield %>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">
+          © <%= Time.current.year %> <span class="footer-highlight">Digital Solutions Agency</span>
+        </p>
+        <div class="footer-items">
+          <span class="footer-item">
+            <i class="ph ph-strategy footer-icon icon-strategy"></i> Strategy
+          </span>
+          <span class="footer-item">
+            <i class="ph ph-layout footer-icon icon-design"></i> Design
+          </span>
+          <span class="footer-item">
+            <i class="ph ph-code footer-icon icon-dev"></i> Development
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+New Website Inquiry
+
+Name: <%= [@contact[:first_name], @contact[:last_name]].compact.join(" ").presence || "Not provided" %>
+Email: <%= @contact[:email].presence || "Not provided" %>
+Phone: <%= @contact[:phone].presence || "Not provided" %>
+Company: <%= @contact[:company].presence || "Not provided" %>
+Website: <%= @contact[:website].presence || "Not provided" %>
+Services: <%= Array(@contact[:services]).reject(&:blank?).join(", ").presence || "Not provided" %>
+Objectives: <%= Array(@contact[:objectives]).reject(&:blank?).join(", ").presence || "Not provided" %>
+Timeline: <%= @contact[:timeline].presence || "Not provided" %>
+Budget: <%= @contact[:budget].presence || "Not provided" %>
+Source: <%= @contact[:source].presence || "Not provided" %>
+Agreed to Communications: <%= @contact[:agree_communications].present? ? "Yes" : "No" %>
+
+Message:
+<%= @contact[:message].presence || "Not provided" %>
