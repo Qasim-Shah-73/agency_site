@@ -41,26 +41,29 @@
         </button>
         
         <div class="nav-links" id="primary-navigation">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-          <%= link_to "Services", services_path, class: "nav-link" %>
-          <%= link_to "Portfolio", portfolio_path, class: "nav-link" %>
-          <%= link_to "About", about_path, class: "nav-link" %>
-          <%= link_to "Contact", contact_path, class: "btn-primary" %>
+          <%= link_to "Home", root_path, class: "nav-link #{'active' if current_page?(root_path)}" %>
+          <%= link_to "Services", services_path, class: "nav-link #{'active' if current_page?(services_path)}" %>
+          <%= link_to "Portfolio", portfolio_path, class: "nav-link #{'active' if current_page?(portfolio_path)}" %>
+          <%= link_to "About", about_path, class: "nav-link #{'active' if current_page?(about_path)}" %>
+          <%= link_to "Contact", contact_path, class: "btn-primary #{'active' if current_page?(contact_path)}" %>
         </div>
       </nav>
     </header>
 
     <!-- PAGE CONTENT -->
-    <main id="main-content" style="padding-top: 80px; min-height: calc(100vh - 400px);">
+    <main id="main-content" style="padding-top: 88px; min-height: calc(100vh - 420px);">
       <%= yield %>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-content">
-        <p class="footer-text">
-          © <%= Time.current.year %> <span class="footer-highlight">Digital Solutions Agency</span>
-        </p>
+        <div class="footer-brand">
+          <%= image_tag "dmc-logo-light.svg", class: "footer-logo", alt: "DMC logo" %>
+          <p class="footer-text">
+            © <%= Time.current.year %> <span class="footer-highlight">DMC</span>
+          </p>
+        </div>
         <div class="footer-items">
           <span class="footer-item">
             <i class="ph ph-strategy footer-icon icon-strategy"></i> Strategy

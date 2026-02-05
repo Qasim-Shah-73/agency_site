@@ -15,6 +15,21 @@
   --bg: #F7FAFC;
   --white: #FFFFFF;
   --border: #E2E8F0;
+  --header-height: 80px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-button: 12px;
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.06);
+  --shadow-hover: 0 26px 70px rgba(15, 23, 42, 0.12);
+  --section-pad: 96px;
+  --section-pad-md: 80px;
+  --section-pad-sm: 64px;
+  --h1: clamp(36px, 5vw, 58px);
+  --h2: clamp(28px, 3.4vw, 44px);
+  --h3: 22px;
+  --text-lg: 18px;
+  --text-md: 16px;
+  --text-sm: 14px;
 }
 
 * { 
@@ -344,13 +359,13 @@ main {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   z-index: 1000;
-  height: 72px;
+  height: var(--header-height);
   transition: all 0.25s ease;
 }
 
 .header.scrolled {
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 1px 3px rgba(26, 32, 44, 0.06);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
 }
 
 .nav {
@@ -434,26 +449,39 @@ main {
   width: 100%;
 }
 
+.nav-link.active {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
   padding: 10px 24px;
-  border-radius: 10px;
+  border-radius: var(--radius-button);
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(44, 82, 130, 0.2);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.22);
 }
 
 .btn-primary:active {
   transform: translateY(0);
+}
+
+.btn-primary.active {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.24);
 }
 
 /* ===========================
@@ -490,6 +518,18 @@ main {
   gap: 32px;
   position: relative;
   z-index: 1;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: 40px;
+  display: block;
 }
 
 .footer-text { 
@@ -557,7 +597,7 @@ main {
   
   .nav-links { 
     position: fixed;
-    top: 72px;
+    top: var(--header-height);
     left: 0;
     right: 0;
     background: rgba(247, 250, 252, 0.98);
@@ -587,6 +627,11 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .logo-mark {

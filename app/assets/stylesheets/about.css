@@ -1,7 +1,7 @@
 /* About Page Styles */
 .hero {
   text-align: center;
-  padding: 120px 32px 90px;
+  padding: var(--section-pad) 32px var(--section-pad-sm);
   position: relative;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(44, 82, 130, 0.12);
+  background: rgba(255, 255, 255, 0.75);
   color: var(--primary);
   padding: 10px 24px;
   border-radius: 50px;
@@ -36,16 +36,17 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 32px;
-  border: 1px solid rgba(44, 82, 130, 0.2);
+  border: 1.5px solid rgba(44, 82, 130, 0.18);
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
 }
 
 .hero-title {
   font-family: 'Sora', sans-serif;
-  font-size: 56px;
+  font-size: var(--h1);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  letter-spacing: -1.5px;
+  letter-spacing: -1.2px;
 }
 
 .hero-gradient {
@@ -56,7 +57,7 @@
 }
 
 .hero-text {
-  font-size: 18px;
+  font-size: var(--text-lg);
   color: var(--gray);
   line-height: 1.7;
   font-weight: 500;
@@ -64,7 +65,7 @@
 
 /* Story */
 .story {
-  padding: 90px 32px;
+  padding: var(--section-pad) 32px;
 }
 
 .story-grid {
@@ -78,7 +79,7 @@
 
 .section-title {
   font-family: 'Sora', sans-serif;
-  font-size: 38px;
+  font-size: var(--h2);
   font-weight: 800;
   margin-bottom: 20px;
   color: var(--dark);
@@ -86,7 +87,7 @@
 }
 
 .section-text {
-  font-size: 16px;
+  font-size: var(--text-md);
   color: var(--gray);
   line-height: 1.8;
   margin-bottom: 20px;
@@ -95,18 +96,18 @@
 
 .story-card {
   background: white;
-  border: 1.5px solid var(--border);
-  border-radius: 24px;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-lg);
   padding: 32px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  box-shadow: 0 20px 50px rgba(26, 32, 44, 0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 .story-stat {
   background: var(--bg);
-  border-radius: 16px;
+  border-radius: var(--radius-md);
   padding: 20px;
   text-align: center;
 }
@@ -130,17 +131,28 @@
 
 /* Values */
 .values {
-  padding: 90px 32px;
+  padding: var(--section-pad) 32px;
   background: linear-gradient(180deg, var(--bg) 0%, white 100%);
 }
 
 .section-header {
   text-align: center;
   margin-bottom: 56px;
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin: 24px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(44, 82, 130, 0.9), rgba(66, 99, 138, 0.4));
 }
 
 .section-subtitle {
-  font-size: 17px;
+  font-size: var(--text-lg);
   color: var(--gray);
   max-width: 720px;
   margin: 0 auto;
@@ -158,22 +170,22 @@
 
 .value-card {
   background: rgba(255, 255, 255, 0.95);
-  border: 1.5px solid var(--border);
-  border-radius: 24px;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-lg);
   padding: 32px;
-  box-shadow: 0 16px 40px rgba(26, 32, 44, 0.08);
+  box-shadow: var(--shadow-soft);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 60px rgba(26, 32, 44, 0.12);
+  box-shadow: var(--shadow-hover);
 }
 
 .value-icon {
   width: 56px;
   height: 56px;
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   background: linear-gradient(135deg, var(--primary) 0%, #42638A 100%);
   display: inline-flex;
   align-items: center;
@@ -200,7 +212,7 @@
 
 /* Process */
 .process {
-  padding: 90px 32px;
+  padding: var(--section-pad) 32px;
 }
 
 .process-grid {
@@ -213,11 +225,12 @@
 
 .process-step {
   background: white;
-  border: 1.5px solid var(--border);
-  border-radius: 24px;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-lg);
   padding: 32px;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-soft);
 }
 
 .process-step::before {
@@ -262,14 +275,14 @@
 
 /* CTA */
 .cta {
-  padding: 90px 32px 120px;
+  padding: var(--section-pad) 32px 120px;
 }
 
 .cta-box {
   background: linear-gradient(135deg, var(--primary) 0%, #42638A 100%);
   color: white;
   padding: 80px 56px;
-  border-radius: 32px;
+  border-radius: var(--radius-lg);
   text-align: center;
   box-shadow: 0 30px 80px rgba(44, 82, 130, 0.35);
   max-width: 1180px;
@@ -295,13 +308,13 @@
 
 .cta-title {
   font-family: 'Sora', sans-serif;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 800;
   margin-bottom: 20px;
 }
 
 .cta-text {
-  font-size: 17px;
+  font-size: var(--text-lg);
   color: rgba(255, 255, 255, 0.9);
   max-width: 700px;
   margin: 0 auto 32px;
@@ -312,9 +325,9 @@
   background: white;
   color: var(--primary);
   padding: 16px 40px;
-  border-radius: 14px;
+  border-radius: var(--radius-button);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   display: inline-block;
   transition: transform 0.2s ease, box-shadow 0.2s ease;

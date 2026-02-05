@@ -74,7 +74,7 @@
    ============================================ */
 .hero { 
     text-align: center; 
-    padding: 140px 32px 100px;
+    padding: var(--section-pad) 32px var(--section-pad-sm);
     position: relative;
     overflow: hidden;
     min-height: 70vh;
@@ -167,11 +167,11 @@
 
 .hero-title {
     font-family: 'Sora', sans-serif;
-    font-size: 58px;
+    font-size: var(--h1);
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 28px;
-    letter-spacing: -1.5px;
+    letter-spacing: -1.2px;
     animation: fadeInUp 1s ease-out 0.3s backwards;
 }
 
@@ -187,7 +187,7 @@
 }
 
 .hero-text {
-    font-size: 18px;
+    font-size: var(--text-lg);
     color: var(--gray);
     max-width: 720px;
     margin: 0 auto 40px;
@@ -201,7 +201,7 @@
    STRATEGY SECTION
    ============================================ */
 .strategy-section {
-    padding: 100px 32px;
+    padding: var(--section-pad) 32px;
     position: relative;
 }
 
@@ -217,7 +217,7 @@
 
 .strategy-title {
     font-family: 'Sora', sans-serif;
-    font-size: 40px;
+    font-size: var(--h2);
     font-weight: 800;
     margin-bottom: 20px;
     color: var(--dark);
@@ -225,7 +225,7 @@
 }
 
 .strategy-subtitle {
-    font-size: 18px;
+    font-size: var(--text-lg);
     color: var(--gray);
     max-width: 720px;
     margin: 0 auto;
@@ -247,7 +247,7 @@
     padding: 32px;
     background: rgba(255, 255, 255, 0.95);
     border: 1.5px solid rgba(226, 232, 240, 0.9);
-    border-radius: 20px;
+    border-radius: var(--radius-md);
     transition: all 0.3s ease;
     animation: fadeInScale 0.6s ease-out backwards;
     box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
@@ -306,7 +306,7 @@
    CONTACT MAIN SECTION
    ============================================ */
 .contact-main {
-    padding: 100px 32px;
+    padding: var(--section-pad) 32px;
 }
 
 .alt-bg {
@@ -343,7 +343,7 @@
 
 .info-title {
     font-family: 'Sora', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 800;
     margin-bottom: 32px;
     color: var(--dark);
@@ -356,7 +356,7 @@
     padding: 24px;
     background: rgba(255, 255, 255, 0.95);
     border: 1.5px solid rgba(226, 232, 240, 0.9);
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     margin-bottom: 20px;
     transition: all 0.3s ease;
     animation: slideIn 0.6s ease-out backwards;
@@ -444,7 +444,7 @@
     padding: 24px;
     background: rgba(255, 255, 255, 0.95);
     border: 1.5px solid rgba(226, 232, 240, 0.9);
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     box-shadow: 0 14px 34px rgba(15, 23, 42, 0.05);
 }
 
@@ -492,7 +492,7 @@
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border: 1.5px solid rgba(226, 232, 240, 0.9);
-    border-radius: 24px;
+    border-radius: var(--radius-lg);
     padding: 48px;
     animation: fadeInScale 0.8s ease-out;
     box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
@@ -531,7 +531,7 @@
 
 .form-title {
     font-family: 'Sora', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 800;
     margin-bottom: 12px;
     color: var(--dark);
@@ -593,6 +593,11 @@
     color: var(--dark);
     background: #F8FAFC;
     transition: all 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #94A3B8;
 }
 
 .form-input:focus,
@@ -684,9 +689,9 @@
     color: white;
     padding: 18px 48px;
     border: none;
-    border-radius: 14px;
+    border-radius: var(--radius-button);
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 6px 20px rgba(44, 82, 130, 0.25);
@@ -725,7 +730,7 @@
    FAQ SECTION
    ============================================ */
 .faq-section {
-    padding: 100px 32px;
+    padding: var(--section-pad) 32px;
     position: relative;
 }
 
@@ -747,15 +752,15 @@
 
 .section-title {
     font-family: 'Sora', sans-serif;
-    font-size: 44px;
+    font-size: var(--h2);
     font-weight: 800;
     margin-bottom: 20px;
     color: var(--dark);
-    letter-spacing: -1.2px;
+    letter-spacing: -1px;
 }
 
 .section-subtitle {
-    font-size: 18px;
+    font-size: var(--text-lg);
     color: var(--gray);
     max-width: 720px;
     margin: 0 auto;
@@ -775,7 +780,7 @@
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border: 1.5px solid rgba(226, 232, 240, 0.9);
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     padding: 32px;
     transition: all 0.4s ease;
     animation: fadeInScale 0.6s ease-out backwards;
@@ -830,14 +835,14 @@
    CTA SECTION
    ============================================ */
 .cta {
-    padding: 100px 32px;
+    padding: var(--section-pad) 32px;
 }
 
 .cta-box {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #15263F 100%);
     color: white;
     padding: 96px 64px;
-    border-radius: 32px;
+    border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: 
         0 30px 80px rgba(15, 23, 42, 0.28),
@@ -927,9 +932,9 @@
     background: white;
     color: var(--primary);
     padding: 18px 40px;
-    border-radius: 14px;
+    border-radius: var(--radius-button);
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -951,9 +956,9 @@
     align-items: center;
     gap: 10px;
     padding: 18px 40px;
-    border-radius: 14px;
+    border-radius: var(--radius-button);
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0.8);
     color: white;
