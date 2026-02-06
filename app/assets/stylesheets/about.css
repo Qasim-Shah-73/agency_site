@@ -11,8 +11,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(44, 82, 130, 0.08) 0%, transparent 55%),
-    radial-gradient(circle at 80% 60%, rgba(74, 85, 104, 0.08) 0%, transparent 55%);
+    radial-gradient(circle at 20% 20%, rgba(29, 78, 216, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 80% 60%, rgba(16, 185, 129, 0.08) 0%, transparent 55%);
   z-index: 0;
 }
 
@@ -36,7 +36,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 32px;
-  border: 1.5px solid rgba(44, 82, 130, 0.18);
+  border: 1.5px solid rgba(29, 78, 216, 0.18);
   box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
 }
 
@@ -50,7 +50,7 @@
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, var(--primary) 0%, #42638A 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -148,7 +148,7 @@
   height: 3px;
   margin: 24px auto 0;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(44, 82, 130, 0.9), rgba(66, 99, 138, 0.4));
+  background: linear-gradient(90deg, rgba(29, 78, 216, 0.9), rgba(30, 58, 138, 0.4));
 }
 
 .section-subtitle {
@@ -186,7 +186,7 @@
   width: 56px;
   height: 56px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--primary) 0%, #42638A 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -237,7 +237,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(44, 82, 130, 0.05), rgba(74, 85, 104, 0.04));
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.05), rgba(51, 65, 85, 0.04));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -279,12 +279,12 @@
 }
 
 .cta-box {
-  background: linear-gradient(135deg, var(--primary) 0%, #42638A 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #0B1220 100%);
   color: white;
   padding: 80px 56px;
   border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: 0 30px 80px rgba(44, 82, 130, 0.35);
+  box-shadow: 0 30px 80px rgba(29, 78, 216, 0.35);
   max-width: 1180px;
   margin: 0 auto;
   position: relative;

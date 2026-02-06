@@ -62,8 +62,8 @@
 }
 
 @keyframes rotateBorder {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
 }
 
 @keyframes gradientShift {
@@ -73,12 +73,12 @@
 
 @keyframes pulseGlow {
     0%, 100% { 
-        box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3), 
-                    0 0 40px rgba(0, 102, 255, 0.1); 
+        box-shadow: 0 10px 30px rgba(29, 78, 216, 0.3), 
+                    0 0 40px rgba(29, 78, 216, 0.1); 
     }
     50% { 
-        box-shadow: 0 10px 30px rgba(0, 102, 255, 0.4), 
-                    0 0 60px rgba(0, 102, 255, 0.2); 
+        box-shadow: 0 10px 30px rgba(29, 78, 216, 0.4), 
+                    0 0 60px rgba(29, 78, 216, 0.2); 
     }
 }
 
@@ -109,9 +109,9 @@
     width: 200%;
     height: 200%;
     background: 
-        radial-gradient(circle at 30% 20%, rgba(44, 82, 130, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 70% 60%, rgba(74, 85, 104, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 50% 80%, rgba(66, 99, 138, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 30% 20%, rgba(29, 78, 216, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(16, 185, 129, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(29, 78, 216, 0.03) 0%, transparent 50%);
     animation: float 20s ease-in-out infinite;
     z-index: 0;
 }
@@ -124,11 +124,11 @@
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 30%, rgba(44, 82, 130, 0.15) 0%, transparent 2%),
-        radial-gradient(circle at 80% 70%, rgba(74, 85, 104, 0.15) 0%, transparent 2%),
-        radial-gradient(circle at 40% 80%, rgba(66, 99, 138, 0.15) 0%, transparent 2%),
-        radial-gradient(circle at 60% 20%, rgba(90, 127, 165, 0.15) 0%, transparent 2%),
-        radial-gradient(circle at 90% 40%, rgba(74, 85, 104, 0.12) 0%, transparent 2%);
+        radial-gradient(circle at 20% 30%, rgba(29, 78, 216, 0.12) 0%, transparent 2%),
+        radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.12) 0%, transparent 2%),
+        radial-gradient(circle at 40% 80%, rgba(29, 78, 216, 0.12) 0%, transparent 2%),
+        radial-gradient(circle at 60% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 2%),
+        radial-gradient(circle at 90% 40%, rgba(29, 78, 216, 0.1) 0%, transparent 2%);
     background-size: 300% 300%;
     animation: particles 30s linear infinite;
     opacity: 0.22;
@@ -153,7 +153,7 @@
     border-radius: 50px;
     font-size: 13px;
     font-weight: 700;
-    border: 1.5px solid rgba(44, 82, 130, 0.18);
+    border: 1.5px solid rgba(29, 78, 216, 0.18);
     background-clip: padding-box;
     margin-bottom: 32px;
     backdrop-filter: blur(10px);
@@ -172,7 +172,7 @@
     inset: -1.5px;
     border-radius: 50px;
     padding: 1.5px;
-    background: linear-gradient(135deg, rgba(44, 82, 130, 0.3), rgba(74, 85, 104, 0.2));
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.3), rgba(51, 65, 85, 0.2));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -194,7 +194,7 @@
 }
 
 .hero-gradient { 
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -234,7 +234,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(44, 82, 130, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(29, 78, 216, 0.2), transparent);
     opacity: 0.5;
 }
 
@@ -251,7 +251,7 @@
     height: 3px;
     margin: 24px auto 0;
     border-radius: 999px;
-    background: linear-gradient(90deg, rgba(44, 82, 130, 0.9), rgba(66, 99, 138, 0.4));
+    background: linear-gradient(90deg, rgba(29, 78, 216, 0.9), rgba(30, 58, 138, 0.4));
 }
 
 .section-title {
@@ -310,7 +310,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(44, 82, 130, 0.03) 0%, rgba(74, 85, 104, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.03) 0%, rgba(51, 65, 85, 0.03) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -323,7 +323,7 @@
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(44, 82, 130, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.06) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     transition: all 0.6s ease;
 }
@@ -340,8 +340,8 @@
 .service-card:hover {
     box-shadow: 
         0 26px 70px rgba(15, 23, 42, 0.12),
-        0 0 0 1px rgba(44, 82, 130, 0.25);
-    border-color: rgba(44, 82, 130, 0.25);
+        0 0 0 1px rgba(29, 78, 216, 0.25);
+    border-color: rgba(29, 78, 216, 0.25);
     transform: translateY(-6px);
     background: rgba(255, 255, 255, 1);
 }
@@ -441,7 +441,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(44, 82, 130, 0.06);
+    background: rgba(29, 78, 216, 0.06);
     padding: 12px 20px;
     border-radius: 12px;
     font-weight: 600;
@@ -450,7 +450,7 @@
     font-size: 14px;
     position: relative;
     z-index: 1;
-    border: 1px solid rgba(44, 82, 130, 0.18);
+    border: 1px solid rgba(29, 78, 216, 0.18);
     transition: all 0.3s ease;
 }
 
@@ -459,8 +459,8 @@
 }
 
 .service-card:hover .results-badge {
-    background: rgba(44, 82, 130, 0.1);
-    border-color: rgba(44, 82, 130, 0.35);
+    background: rgba(29, 78, 216, 0.1);
+    border-color: rgba(29, 78, 216, 0.35);
     transform: translateX(4px);
 }
 
@@ -481,7 +481,7 @@
 }
 
 .tech-stack i {
-    color: var(--primary);
+    color: var(--accent);
     font-size: 18px;
 }
 
@@ -491,7 +491,7 @@
 
 .service-card:hover .tech-stack {
     background: white;
-    border-color: var(--primary);
+    border-color: rgba(29, 78, 216, 0.4);
 }
 
 /* ============================================
@@ -502,14 +502,14 @@
 }
 
 .cta-box {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #15263F 100%);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #0B1220 100%);
     color: white;
     padding: 96px 64px;
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: 
         0 30px 80px rgba(15, 23, 42, 0.28),
-        0 0 120px rgba(44, 82, 130, 0.12),
+        0 0 120px rgba(29, 78, 216, 0.12),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     max-width: 1280px;
     margin: 0 auto;
