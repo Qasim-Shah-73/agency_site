@@ -86,10 +86,6 @@ test:
 #
 production:
   url: <%= ENV["DATABASE_URL"] %>
-  
-  cable:
-    <<: *default
-    url: <%= ENV["DATABASE_URL"] %>
   # primary: &primary_production
   #   <<: *default
   #   database: agency_site_production
